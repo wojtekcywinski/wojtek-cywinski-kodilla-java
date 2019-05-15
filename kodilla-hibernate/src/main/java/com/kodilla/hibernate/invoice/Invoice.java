@@ -2,7 +2,6 @@ package com.kodilla.hibernate.invoice;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,7 +9,7 @@ import java.util.List;
 public final class Invoice {
     private int id;
     private String number;
-    private List<Item> items = new ArrayList<>();
+    private List<Item> items;
 
     public Invoice() {
     }
@@ -42,7 +41,7 @@ public final class Invoice {
         return items;
     }
 
-    private void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 

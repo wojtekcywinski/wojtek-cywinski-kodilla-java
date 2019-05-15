@@ -4,7 +4,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+@NamedNativeQuery(
+        name = "Company.retrieveCompaniesByFirstThreeLetters",
+        query = "SELECT * FROM COMPANIES" + "WHERE SUBSTRING(FROM 1 TO 3) == :NAME)",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -49,3 +54,4 @@ public class Company {
         this.name = name;
     }
 }
+*/

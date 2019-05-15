@@ -1,5 +1,5 @@
 package com.kodilla.hibernate.manytomany.dao;
-
+/*
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
 import org.junit.Assert;
@@ -16,7 +16,7 @@ public class CompanyDaoTestSuite {
     CompanyDao companyDao;
 
     @Test
-    public void testSaveManyToMany(){
+    public void testSaveManyToMany() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -60,4 +60,10 @@ public class CompanyDaoTestSuite {
             //do nothing
         }
     }
+
+    @Test
+    public void testRetrieveEmployeesBasedOnNameFunction() {
+    }
 }
+
+ */

@@ -62,7 +62,7 @@ public final class Item {
         this.invoice = invoice;
     }
 
-    private void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
