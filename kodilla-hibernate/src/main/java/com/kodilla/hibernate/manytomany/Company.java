@@ -4,10 +4,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
-/*
+
 @NamedNativeQuery(
         name = "Company.retrieveCompaniesByFirstThreeLetters",
-        query = "SELECT * FROM COMPANIES" + "WHERE SUBSTRING(FROM 1 TO 3) == :NAME)",
+        query = "SELECT * FROM COMPANIES" + "WHERE SUBSTRING(COMPANY_NAME, 1, 3) == :NAME)",
         resultClass = Company.class
 )
 @Entity
@@ -37,21 +37,21 @@ public class Company {
     public String getName() {
         return name;
     }
+
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "companies")
     public List<Employee> getEmployees() {
         return employees;
     }
 
-    private void setEmployees(List<Employee> employees) {
+    public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
 
-    private void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    private void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 }
-*/
